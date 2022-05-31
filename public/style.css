@@ -1,0 +1,57 @@
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightgoldenrodyellow;
+}
+.container {
+    margin: auto;
+    width: 60%;
+}
+img {
+    display: inline-block;
+}
+.caption {
+    display: block;
+    text-align: center;
+}
+.garments{
+    display: flex;
+    flex-wrap: wrap;
+}
+.garments {
+    flex : 1;
+    background-color: beige;
+    border: 1px solid greenyellow;
+    padding: 1em;
+    margin: 0.25em;
+    border-radius: 0.5em;
+}
+.hidden {
+    display: none;
+}
+.field label {
+    display: block;
+    width: 5em;
+    margin-top: 0.5em;
+}
+.mt1 {
+    margin-top: 1em;
+}
+.message {
+    margin-top: 1em;
+    padding: 1em;
+   
+    background-color: green;
+    color: white;
+    margin-bottom: 1em;
+    text-align:"center";
+    padding: 1em;
+}
+.error {
+    background-color : red;
+  } 
+
+.login{
+    margin-top: 15em;
+    text-align: center;
+}
