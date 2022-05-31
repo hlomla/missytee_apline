@@ -16,7 +16,13 @@ const PORT = process.env.PORT || 4090;
 
 const DATABASE_URL = process.env.DATABASE_URL;
 const pgp = PgPromise({});
-const db = pgp(DATABASE_URL);
+const config = {
+	connectionString: DATABASE_URL ,
+	max: 30,
+	ssl:{ rejectUnauthorized : false}
+ };
+ 
+ const db = pgp(config);
 
 API(app, db);
 
