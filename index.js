@@ -29,3 +29,19 @@ API(app, db);
 app.listen(PORT, function() {
 	console.log(`App started on port ${PORT}`)
 });
+
+app.post('/api/login', (req, res) => {
+	const {username} = req.body;
+
+	if(username !== 'hlomla'){
+		accessToken === null
+	} else{
+		const accessToken = generateAccessToken(username)
+		accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
+    res.json({ accessToken: accessToken })
+	}
+	
+})
+function generateAccessToken(username) {
+    return jwt.sign(username, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "45m"})
+}
